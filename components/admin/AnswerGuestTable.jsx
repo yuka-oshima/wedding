@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react";
 import useGetUsers from "./api/useGetUsers";
 
 const AnswerGuestTable = () => {
-  const [isLoading, users] = useGetUsers();
+  const [, users] = useGetUsers();
 
-   //usersのcorrectが5の人数を数える
+  //usersのcorrectが5の人数を数える
   const correctCount = users.filter((user) => user.correct === 5).length;
-  console.log(correctCount)
 
   return (
     <>
@@ -28,10 +26,7 @@ const AnswerGuestTable = () => {
                 } border`}
               >
                 <td className={"border"}>{guest.formalName}</td>
-                <td
-                  className={"border"
-                  }
-                >
+                <td className={"border"}>
                   {guest.correct === undefined ? "---" : guest.correct}
                 </td>
                 <td
