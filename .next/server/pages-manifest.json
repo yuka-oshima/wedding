@@ -1,7 +1,12 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/home/[id]": "pages/home/[id].js",
-  "/api/user/[id]": "pages/api/user/[id].js"
+  "/404": "pages/404.html",
+  "/admin/quiz-tally": "pages/admin/quiz-tally.html",
+  "/api/user/[id]": "pages/api/user/[id].js",
+  "/home/[id]": "pages/home/[id].html",
+  "/api/user": "pages/api/user.js",
+  "/profile": "pages/profile.html",
+  "/quiz/[index]": "pages/quiz/[index].html",
+  "/_document": "pages/_document.js"
 }
