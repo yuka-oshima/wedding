@@ -1,0 +1,137 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  display: block;
+}
+
+.red {
+  color: red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.dragging {
+  background-color: #eee;
+}
+
+.custom-font {
+  font-family: serif;
+}
+
+@font-face {
+  font-family: "title-font";
+  src: url("../public/font/ALS Script.ttf");
+}
+.custom-title-font {
+  font-family:'title-font';
+}
+
+.custom-img {
+  background-image: url("../public/images/flower_bg.jpeg");
+}
+
+.home-bg-img {
+  background-image: url("../public/images/flower_home.jpeg");
+  width: 100%;
+  height: auto;
+  box-shadow: inset 0 0 0 0 #FFF;
+}
+
+.profile-bg-img::before {
+  background-image: url("../public/images/leaf.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  content:"" ;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.profile-bg-img{
+  position: relative;
+}
+
+.greeting-bg-img {
+  background-image: url("../public/images/small_flowers.jpeg");
+  width: 100%;
+  height: auto;
+  box-shadow: inset 0 0 20px 0px #FFF;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn_delay {
+  animation-name: fadeInAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
