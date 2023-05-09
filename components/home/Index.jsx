@@ -4,21 +4,6 @@ import Greeting from "./Greeting";
 import HomeTitle from "./HomeTitle";
 import Information from "./Information";
 import useGetUser from "./api/useGetUser";
-import clientPromise from "../../lib/mongo";
-
-export async function getStaticPaths(context){
-  const id = context.query.id;
-  const mongoClient = await clientPromise;
-  const data = await mongoClient
-  .db("wedding")
-  .collection("users")
-  .findOne({ uuid: id });
-  return {
-    props: {
-      data: JSON.parse(JSON.stringify(data))
-    }
-  }
-}
 
 const Index = ({data}) => {
   const [isActiveLoader, setIsActiveLoader] = useState(true);

@@ -175,7 +175,6 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _HomeTitle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6585);
 /* harmony import */ var _Information__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6921);
 /* harmony import */ var _api_useGetUser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4943);
-/* harmony import */ var _lib_mongo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2096);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_api_useGetUser__WEBPACK_IMPORTED_MODULE_6__]);
 _api_useGetUser__WEBPACK_IMPORTED_MODULE_6__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -185,20 +184,6 @@ _api_useGetUser__WEBPACK_IMPORTED_MODULE_6__ = (__webpack_async_dependencies__.t
 
 
 
-
-// export async function getStaticPaths(context){
-//   const id = context.query.id;
-//   const mongoClient = await clientPromise;
-//   const data = await mongoClient
-//   .db("wedding")
-//   .collection("users")
-//   .findOne({ uuid: id });
-//   return {
-//     props: {
-//       data: JSON.parse(JSON.stringify(data))
-//     }
-//   }
-// }
 const Index = ({ data  })=>{
     const [isActiveLoader, setIsActiveLoader] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(true);
     // const [, userInfo] = useGetUser();
@@ -352,10 +337,13 @@ const Information = ({ userInfo  })=>{
 /***/ }),
 
 /***/ 2096:
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
-// UNUSED EXPORTS: default
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "Z": () => (/* binding */ mongo)
+});
 
 ;// CONCATENATED MODULE: external "mongodb"
 const external_mongodb_namespaceObject = require("mongodb");
@@ -375,7 +363,7 @@ if (false) {} else {
     client = new external_mongodb_namespaceObject.MongoClient(URI, options);
     clientPromise = client.connect();
 }
-/* harmony default export */ const mongo = ((/* unused pure expression or super */ null && (clientPromise)));
+/* harmony default export */ const mongo = (clientPromise);
 
 
 /***/ }),
@@ -386,23 +374,54 @@ if (false) {} else {
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "getStaticPaths": () => (/* binding */ getStaticPaths),
+/* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_home_Index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4175);
+/* harmony import */ var _lib_mongo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(2096);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_home_Index__WEBPACK_IMPORTED_MODULE_2__]);
 _components_home_Index__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
-const Home = ()=>{
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__({ post  }) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_home_Index__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {})
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_home_Index__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Z, {
+            data: post
+        })
     });
+}
+const getStaticPaths = async ()=>{
+    const mongoClient = await _lib_mongo__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z;
+    const data = await mongoClient.db("wedding").collection("users").find({}).toArray();
+    const posts = JSON.parse(JSON.stringify(data));
+    const paths = posts.map((post)=>({
+            params: {
+                id: post.id.toString()
+            }
+        }));
+    return {
+        paths,
+        fallback: false
+    };
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
+const getStaticProps = async ({ params  })=>{
+    const mongoClient = await _lib_mongo__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z;
+    const data = await mongoClient.db("wedding").collection("users").findOne({
+        id: Number(params.id)
+    }).toArray();
+    const post = JSON.parse(JSON.stringify(data));
+    return {
+        props: {
+            post
+        }
+    };
+};
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
