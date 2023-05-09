@@ -1,5 +1,6 @@
 import clientPromise from "../../../lib/mongo";
 
+
 const handler = async (req, res) => {
   const mongoClient = await clientPromise;
   try {
@@ -8,7 +9,6 @@ const handler = async (req, res) => {
       .collection("users")
       .find({})
       .toArray();
-      console.log(data)
     const result = res.status(200).json(JSON.parse(JSON.stringify(data)));
     return result;
   } catch (err) {

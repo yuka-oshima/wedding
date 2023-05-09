@@ -5,9 +5,9 @@ import HomeTitle from "./HomeTitle";
 import Information from "./Information";
 import useGetUser from "./api/useGetUser";
 
-const Index = () => {
+const Index = ({data}) => {
   const [isActiveLoader, setIsActiveLoader] = useState(true);
-  const [, userInfo] = useGetUser();
+  // const [, userInfo] = useGetUser();
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,8 +30,8 @@ const Index = () => {
         <>
           <HomeTitle />
           <div></div>
-          <Greeting userInfo={userInfo} />
-          <Information userInfo={userInfo} />
+          <Greeting userInfo={data} />
+          <Information userInfo={data} />
         </>
       )}
     </>

@@ -50,7 +50,6 @@ const handler = async (req, res)=>{
     const mongoClient = await _lib_mongo__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z;
     try {
         const data = await mongoClient.db("wedding").collection("users").find({}).toArray();
-        console.log(data);
         const result = res.status(200).json(JSON.parse(JSON.stringify(data)));
         return result;
     } catch (err) {
