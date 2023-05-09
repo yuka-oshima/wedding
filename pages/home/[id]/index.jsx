@@ -5,7 +5,8 @@ import Index from "../../../components/home/Index";
 export default function UserDetails(props) {
   return (
     <>
-      <p>{props.userData.id}</p>
+     <Index data={props.userData.name} />
+      {/* <p>{props.userData.id}</p> */}
     </>
   );
 }
@@ -62,6 +63,7 @@ export const getStaticProps = async (context) => {
     props: {
       userData: {
         id: selectedUser._id.toString(),
+        name: selectedUser.name,
       },
     },
   };

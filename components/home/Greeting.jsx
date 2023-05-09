@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 // import { useInView } from "react-intersection-observer";
 
-const Greeting = ({ userInfo }) => {
+const Greeting = ({ data }) => {
   const [message, setMessage] = useState("");
   // const { ref, inView } = useInView({
   //   rootMargin: "100px",
   //   triggerOnce: true,
   // });
 
-  useEffect(() => {
-    if (userInfo.message === undefined) return;
-    const editMessage = userInfo.message.split("/");
-    const editMessageElement = editMessage.map((message, index) => {
-      //messageが"//n"の場合は改行
-      if (message === "\\n") {
-        return <br/>;
-      }else{
-        return <p key={index} className="custom-font text-md">{message}</p>;
-      }
-    });
-    setMessage(editMessageElement);
-  }, [userInfo]);
+  // useEffect(() => {
+  //   if (userInfo.message === undefined) return;
+  //   const editMessage = userInfo.message.split("/");
+  //   const editMessageElement = editMessage.map((message, index) => {
+  //     //messageが"//n"の場合は改行
+  //     if (message === "\\n") {
+  //       return <br/>;
+  //     }else{
+  //       return <p key={index} className="custom-font text-md">{message}</p>;
+  //     }
+  //   });
+  //   setMessage(editMessageElement);
+  // }, [userInfo]);
 
   return (
     <>
@@ -48,7 +48,7 @@ const Greeting = ({ userInfo }) => {
               id="guestName"
               className="font-semibold custom-font text-xl mt-[1em]"
             >
-              {userInfo.name}
+              {data}
             </div>
             <br />
             {message === "" ? (
