@@ -1,88 +1,45 @@
 "use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 438;
-exports.ids = [438];
+exports.id = "pages/api/user/[id]";
+exports.ids = ["pages/api/user/[id]"];
 exports.modules = {
 
-/***/ 9251:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "mongodb":
+/*!**************************!*\
+  !*** external "mongodb" ***!
+  \**************************/
+/***/ ((module) => {
 
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ mongo)
-});
-
-;// CONCATENATED MODULE: external "mongodb"
-const external_mongodb_namespaceObject = require("mongodb");
-;// CONCATENATED MODULE: ./lib/mongo/index.js
-
-if (!process.env.MONGO_URI) {
-    throw new Error("Invalid environment variable MONGO_URI");
-}
-const URI = process.env.MONGO_URI;
-const options = {};
-if (!URI) {
-    throw new Error("Please define the MONGO_URI environment variable inside .env.local");
-}
-let client;
-let clientPromise;
-if (false) {} else {
-    client = new external_mongodb_namespaceObject.MongoClient(URI, options);
-    clientPromise = client.connect();
-}
-/* harmony default export */ const mongo = (clientPromise);
-
+module.exports = require("mongodb");
 
 /***/ }),
 
-/***/ 9753:
+/***/ "(api)/./lib/mongo/index.js":
+/*!****************************!*\
+  !*** ./lib/mongo/index.js ***!
+  \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _lib_mongo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9251);
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mongodb */ \"mongodb\");\n/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);\n\nif (!process.env.MONGO_URI) {\n    throw new Error(\"Invalid environment variable MONGO_URI\");\n}\nconst URI = process.env.MONGO_URI;\nconst options = {};\nif (!URI) {\n    throw new Error(\"Please define the MONGO_URI environment variable inside .env.local\");\n}\nlet client;\nlet clientPromise;\nif (true) {\n    if (!global._mongoClientPromise) {\n        client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(URI, options);\n        global._mongoClientPromise = client.connect();\n    }\n    clientPromise = global._mongoClientPromise;\n} else {}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clientPromise);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9saWIvbW9uZ28vaW5kZXguanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQXNDO0FBR3RDLElBQUksQ0FBQ0MsUUFBUUMsR0FBRyxDQUFDQyxTQUFTLEVBQUU7SUFDMUIsTUFBTSxJQUFJQyxNQUFNLDBDQUEwQztBQUM1RCxDQUFDO0FBQ0QsTUFBTUMsTUFBTUosUUFBUUMsR0FBRyxDQUFDQyxTQUFTO0FBQ2pDLE1BQU1HLFVBQVUsQ0FBQztBQUNqQixJQUFJLENBQUNELEtBQUs7SUFDUixNQUFNLElBQUlELE1BQ1Isc0VBQ0E7QUFDSixDQUFDO0FBQ0QsSUFBSUc7QUFDSixJQUFJQztBQUNKLElBQUlQLElBQXNDLEVBQUU7SUFDMUMsSUFBSSxDQUFDUSxPQUFPQyxtQkFBbUIsRUFBRTtRQUMvQkgsU0FBUyxJQUFJUCxnREFBV0EsQ0FBQ0ssS0FBS0M7UUFDOUJHLE9BQU9DLG1CQUFtQixHQUFHSCxPQUFPSSxPQUFPO0lBQzdDLENBQUM7SUFDREgsZ0JBQWdCQyxPQUFPQyxtQkFBbUI7QUFDNUMsT0FBTyxFQUdOO0FBRUQsaUVBQWVGLGFBQWFBLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly93ZWRkaW5nLWFwcC8uL2xpYi9tb25nby9pbmRleC5qcz8zZjhmIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IE1vbmdvQ2xpZW50IH0gZnJvbSBcIm1vbmdvZGJcIjtcclxuXHJcblxyXG5pZiAoIXByb2Nlc3MuZW52Lk1PTkdPX1VSSSkge1xyXG4gIHRocm93IG5ldyBFcnJvcihcIkludmFsaWQgZW52aXJvbm1lbnQgdmFyaWFibGUgTU9OR09fVVJJXCIpO1xyXG59XHJcbmNvbnN0IFVSSSA9IHByb2Nlc3MuZW52Lk1PTkdPX1VSSTtcclxuY29uc3Qgb3B0aW9ucyA9IHt9O1xyXG5pZiAoIVVSSSkge1xyXG4gIHRocm93IG5ldyBFcnJvcihcclxuICAgIFwiUGxlYXNlIGRlZmluZSB0aGUgTU9OR09fVVJJIGVudmlyb25tZW50IHZhcmlhYmxlIGluc2lkZSAuZW52LmxvY2FsXCJcclxuICApO1xyXG59XHJcbmxldCBjbGllbnQ7XHJcbmxldCBjbGllbnRQcm9taXNlO1xyXG5pZiAocHJvY2Vzcy5lbnYuTk9ERV9FTlYgPT09IFwiZGV2ZWxvcG1lbnRcIikge1xyXG4gIGlmICghZ2xvYmFsLl9tb25nb0NsaWVudFByb21pc2UpIHtcclxuICAgIGNsaWVudCA9IG5ldyBNb25nb0NsaWVudChVUkksIG9wdGlvbnMpO1xyXG4gICAgZ2xvYmFsLl9tb25nb0NsaWVudFByb21pc2UgPSBjbGllbnQuY29ubmVjdCgpO1xyXG4gIH1cclxuICBjbGllbnRQcm9taXNlID0gZ2xvYmFsLl9tb25nb0NsaWVudFByb21pc2U7XHJcbn0gZWxzZSB7XHJcbiAgY2xpZW50ID0gbmV3IE1vbmdvQ2xpZW50KFVSSSwgb3B0aW9ucyk7XHJcbiAgY2xpZW50UHJvbWlzZSA9IGNsaWVudC5jb25uZWN0KCk7XHJcbn1cclxuXHJcbmV4cG9ydCBkZWZhdWx0IGNsaWVudFByb21pc2U7XHJcbiJdLCJuYW1lcyI6WyJNb25nb0NsaWVudCIsInByb2Nlc3MiLCJlbnYiLCJNT05HT19VUkkiLCJFcnJvciIsIlVSSSIsIm9wdGlvbnMiLCJjbGllbnQiLCJjbGllbnRQcm9taXNlIiwiZ2xvYmFsIiwiX21vbmdvQ2xpZW50UHJvbWlzZSIsImNvbm5lY3QiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(api)/./lib/mongo/index.js\n");
 
-const handler = async (req, res)=>{
-    const mongoClient = await _lib_mongo__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z;
-    const id = req.query.id;
-    //reqにstatusとcorrectが入っている場合は更新処理
-    if (req.body.status) {
-        try {
-            const data = await mongoClient.db("wedding").collection("users").findOneAndUpdate({
-                uuid: id
-            }, {
-                $set: {
-                    status: req.body.status,
-                    correct: req.body.correct
-                }
-            });
-            const result = res.status(200).json(JSON.parse(JSON.stringify(data)));
-            return result;
-        } catch (err) {
-            return res.status(500).json({
-                message: err.message
-            });
-        }
-    } else {
-        try {
-            const data = await mongoClient.db("wedding").collection("users").findOne({
-                uuid: id
-            });
-            const result = res.status(200).json(JSON.parse(JSON.stringify(data)));
-            return result;
-        } catch (err) {
-            return res.status(500).json({
-                message: err.message
-            });
-        }
-    }
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (handler);
+/***/ }),
 
+/***/ "(api)/./pages/api/user/[id].jsx":
+/*!*********************************!*\
+  !*** ./pages/api/user/[id].jsx ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getServerSideProps\": () => (/* binding */ getServerSideProps)\n/* harmony export */ });\n/* harmony import */ var _lib_mongo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../lib/mongo */ \"(api)/./lib/mongo/index.js\");\n\nasync function getServerSideProps(context) {\n    const id = context.query.id;\n    const mongoClient = await _lib_mongo__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n    const data = await mongoClient.db(\"wedding\").collection(\"users\").findOne({\n        uuid: id\n    });\n    return {\n        props: {\n            data: JSON.parse(JSON.stringify(data))\n        }\n    };\n}\nconst handler = async (req, res)=>{\n    const mongoClient = await _lib_mongo__WEBPACK_IMPORTED_MODULE_0__[\"default\"];\n    const id = req.query.id;\n    //reqにstatusとcorrectが入っている場合は更新処理\n    if (req.body.status) {\n        try {\n            const data = await mongoClient.db(\"wedding\").collection(\"users\").findOneAndUpdate({\n                uuid: id\n            }, {\n                $set: {\n                    status: req.body.status,\n                    correct: req.body.correct\n                }\n            });\n            const result = res.status(200).json(JSON.parse(JSON.stringify(data)));\n            return result;\n        } catch (err) {\n            return res.status(500).json({\n                message: err.message\n            });\n        }\n    } else {\n        try {\n            const data = await mongoClient.db(\"wedding\").collection(\"users\").findOne({\n                uuid: id\n            });\n            const result = res.status(200).json(JSON.parse(JSON.stringify(data)));\n            return result;\n        } catch (err) {\n            return res.status(500).json({\n                message: err.message\n            });\n        }\n    }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (handler);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwaSkvLi9wYWdlcy9hcGkvdXNlci9baWRdLmpzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBK0M7QUFFeEMsZUFBZUMsbUJBQW1CQyxPQUFPLEVBQUM7SUFDL0MsTUFBTUMsS0FBS0QsUUFBUUUsS0FBSyxDQUFDRCxFQUFFO0lBQzNCLE1BQU1FLGNBQWMsTUFBTUwsa0RBQWFBO0lBQ3ZDLE1BQU1NLE9BQU8sTUFBTUQsWUFDbEJFLEVBQUUsQ0FBQyxXQUNIQyxVQUFVLENBQUMsU0FDWEMsT0FBTyxDQUFDO1FBQUVDLE1BQU1QO0lBQUc7SUFDcEIsT0FBTztRQUNMUSxPQUFPO1lBQ0xMLE1BQU1NLEtBQUtDLEtBQUssQ0FBQ0QsS0FBS0UsU0FBUyxDQUFDUjtRQUNsQztJQUNGO0FBQ0YsQ0FBQztBQUdELE1BQU1TLFVBQVUsT0FBT0MsS0FBS0MsTUFBUTtJQUNsQyxNQUFNWixjQUFjLE1BQU1MLGtEQUFhQTtJQUN2QyxNQUFNRyxLQUFLYSxJQUFJWixLQUFLLENBQUNELEVBQUU7SUFDdkIsaUNBQWlDO0lBQ2pDLElBQUlhLElBQUlFLElBQUksQ0FBQ0MsTUFBTSxFQUFFO1FBQ25CLElBQUk7WUFDRixNQUFNYixPQUFPLE1BQU1ELFlBQ2hCRSxFQUFFLENBQUMsV0FDSEMsVUFBVSxDQUFDLFNBQ1hZLGdCQUFnQixDQUNmO2dCQUFFVixNQUFNUDtZQUFHLEdBQ1g7Z0JBQUVrQixNQUFNO29CQUFFRixRQUFRSCxJQUFJRSxJQUFJLENBQUNDLE1BQU07b0JBQUVHLFNBQVNOLElBQUlFLElBQUksQ0FBQ0ksT0FBTztnQkFBQztZQUFFO1lBRW5FLE1BQU1DLFNBQVNOLElBQUlFLE1BQU0sQ0FBQyxLQUFLSyxJQUFJLENBQUNaLEtBQUtDLEtBQUssQ0FBQ0QsS0FBS0UsU0FBUyxDQUFDUjtZQUM5RCxPQUFPaUI7UUFDVCxFQUFFLE9BQU9FLEtBQUs7WUFDWixPQUFPUixJQUFJRSxNQUFNLENBQUMsS0FBS0ssSUFBSSxDQUFDO2dCQUFFRSxTQUFTRCxJQUFJQyxPQUFPO1lBQUM7UUFDckQ7SUFDRixPQUFPO1FBQ0wsSUFBSTtZQUNGLE1BQU1wQixPQUFPLE1BQU1ELFlBQ2hCRSxFQUFFLENBQUMsV0FDSEMsVUFBVSxDQUFDLFNBQ1hDLE9BQU8sQ0FBQztnQkFBRUMsTUFBTVA7WUFBRztZQUN0QixNQUFNb0IsU0FBU04sSUFBSUUsTUFBTSxDQUFDLEtBQUtLLElBQUksQ0FBQ1osS0FBS0MsS0FBSyxDQUFDRCxLQUFLRSxTQUFTLENBQUNSO1lBQzlELE9BQU9pQjtRQUNULEVBQUUsT0FBT0UsS0FBSztZQUNaLE9BQU9SLElBQUlFLE1BQU0sQ0FBQyxLQUFLSyxJQUFJLENBQUM7Z0JBQUVFLFNBQVNELElBQUlDLE9BQU87WUFBQztRQUNyRDtJQUNGLENBQUM7QUFDSDtBQUVBLGlFQUFlWCxPQUFPQSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vd2VkZGluZy1hcHAvLi9wYWdlcy9hcGkvdXNlci9baWRdLmpzeD83NmQ5Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBjbGllbnRQcm9taXNlIGZyb20gXCIuLi8uLi8uLi9saWIvbW9uZ29cIjtcclxuXHJcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRTZXJ2ZXJTaWRlUHJvcHMoY29udGV4dCl7XHJcbiAgY29uc3QgaWQgPSBjb250ZXh0LnF1ZXJ5LmlkO1xyXG4gIGNvbnN0IG1vbmdvQ2xpZW50ID0gYXdhaXQgY2xpZW50UHJvbWlzZTtcclxuICBjb25zdCBkYXRhID0gYXdhaXQgbW9uZ29DbGllbnRcclxuICAuZGIoXCJ3ZWRkaW5nXCIpXHJcbiAgLmNvbGxlY3Rpb24oXCJ1c2Vyc1wiKVxyXG4gIC5maW5kT25lKHsgdXVpZDogaWQgfSk7XHJcbiAgcmV0dXJuIHtcclxuICAgIHByb3BzOiB7XHJcbiAgICAgIGRhdGE6IEpTT04ucGFyc2UoSlNPTi5zdHJpbmdpZnkoZGF0YSkpXHJcbiAgICB9XHJcbiAgfVxyXG59XHJcblxyXG5cclxuY29uc3QgaGFuZGxlciA9IGFzeW5jIChyZXEsIHJlcykgPT4ge1xyXG4gIGNvbnN0IG1vbmdvQ2xpZW50ID0gYXdhaXQgY2xpZW50UHJvbWlzZTtcclxuICBjb25zdCBpZCA9IHJlcS5xdWVyeS5pZDtcclxuICAvL3JlceOBq3N0YXR1c+OBqGNvcnJlY3TjgYzlhaXjgaPjgabjgYTjgovloLTlkIjjga/mm7TmlrDlh6bnkIZcclxuICBpZiAocmVxLmJvZHkuc3RhdHVzKSB7XHJcbiAgICB0cnkge1xyXG4gICAgICBjb25zdCBkYXRhID0gYXdhaXQgbW9uZ29DbGllbnRcclxuICAgICAgICAuZGIoXCJ3ZWRkaW5nXCIpXHJcbiAgICAgICAgLmNvbGxlY3Rpb24oXCJ1c2Vyc1wiKVxyXG4gICAgICAgIC5maW5kT25lQW5kVXBkYXRlKFxyXG4gICAgICAgICAgeyB1dWlkOiBpZCB9LFxyXG4gICAgICAgICAgeyAkc2V0OiB7IHN0YXR1czogcmVxLmJvZHkuc3RhdHVzLCBjb3JyZWN0OiByZXEuYm9keS5jb3JyZWN0IH0gfVxyXG4gICAgICAgICk7XHJcbiAgICAgIGNvbnN0IHJlc3VsdCA9IHJlcy5zdGF0dXMoMjAwKS5qc29uKEpTT04ucGFyc2UoSlNPTi5zdHJpbmdpZnkoZGF0YSkpKTtcclxuICAgICAgcmV0dXJuIHJlc3VsdDtcclxuICAgIH0gY2F0Y2ggKGVycikge1xyXG4gICAgICByZXR1cm4gcmVzLnN0YXR1cyg1MDApLmpzb24oeyBtZXNzYWdlOiBlcnIubWVzc2FnZSB9KTtcclxuICAgIH1cclxuICB9IGVsc2Uge1xyXG4gICAgdHJ5IHtcclxuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IG1vbmdvQ2xpZW50XHJcbiAgICAgICAgLmRiKFwid2VkZGluZ1wiKVxyXG4gICAgICAgIC5jb2xsZWN0aW9uKFwidXNlcnNcIilcclxuICAgICAgICAuZmluZE9uZSh7IHV1aWQ6IGlkIH0pO1xyXG4gICAgICBjb25zdCByZXN1bHQgPSByZXMuc3RhdHVzKDIwMCkuanNvbihKU09OLnBhcnNlKEpTT04uc3RyaW5naWZ5KGRhdGEpKSk7XHJcbiAgICAgIHJldHVybiByZXN1bHQ7XHJcbiAgICB9IGNhdGNoIChlcnIpIHtcclxuICAgICAgcmV0dXJuIHJlcy5zdGF0dXMoNTAwKS5qc29uKHsgbWVzc2FnZTogZXJyLm1lc3NhZ2UgfSk7XHJcbiAgICB9XHJcbiAgfVxyXG59O1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgaGFuZGxlcjtcclxuIl0sIm5hbWVzIjpbImNsaWVudFByb21pc2UiLCJnZXRTZXJ2ZXJTaWRlUHJvcHMiLCJjb250ZXh0IiwiaWQiLCJxdWVyeSIsIm1vbmdvQ2xpZW50IiwiZGF0YSIsImRiIiwiY29sbGVjdGlvbiIsImZpbmRPbmUiLCJ1dWlkIiwicHJvcHMiLCJKU09OIiwicGFyc2UiLCJzdHJpbmdpZnkiLCJoYW5kbGVyIiwicmVxIiwicmVzIiwiYm9keSIsInN0YXR1cyIsImZpbmRPbmVBbmRVcGRhdGUiLCIkc2V0IiwiY29ycmVjdCIsInJlc3VsdCIsImpzb24iLCJlcnIiLCJtZXNzYWdlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(api)/./pages/api/user/[id].jsx\n");
 
 /***/ })
 
@@ -93,7 +50,7 @@ const handler = async (req, res)=>{
 var __webpack_require__ = require("../../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(9753));
+var __webpack_exports__ = (__webpack_exec__("(api)/./pages/api/user/[id].jsx"));
 module.exports = __webpack_exports__;
 
 })();
