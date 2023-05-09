@@ -8,6 +8,8 @@ import useGetUser from "./api/useGetUser";
 const Index = ({data}) => {
   const [isActiveLoader, setIsActiveLoader] = useState(true);
   // const [, userInfo] = useGetUser();
+  
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,7 +32,7 @@ const Index = ({data}) => {
         <>
           <HomeTitle />
           <div></div>
-          <Greeting userInfo={data} />
+          <Greeting data={data} />
           <Information userInfo={data} />
         </>
       )}
