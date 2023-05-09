@@ -1,6 +1,13 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/home/[id]": "pages/home/[id].js"
+  "/404": "pages/404.js",
+  "/admin/quiz-tally": "pages/admin/quiz-tally.js",
+  "/api/user/[id]": "pages/api/user/[id].js",
+  "/api/user": "pages/api/user.js",
+  "/": "pages/index.js",
+  "/home/[id]": "pages/home/[id].js",
+  "/profile": "pages/profile.js",
+  "/quiz/[index]": "pages/quiz/[index].js",
+  "/_document": "pages/_document.js"
 }

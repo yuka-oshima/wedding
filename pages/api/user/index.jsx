@@ -1,19 +1,5 @@
 import clientPromise from "../../../lib/mongo";
 
-export async function getServerSideProps(context){
-  const mongoClient = await clientPromise;
-  const data = await mongoClient
-  .db("wedding")
-  .collection("users")
-  .find({})
-  .toArray();
-  return {
-    props: {
-      data: JSON.parse(JSON.stringify(data))
-    }
-  }
-}
-
 
 const handler = async (req, res) => {
   const mongoClient = await clientPromise;
