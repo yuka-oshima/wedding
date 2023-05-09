@@ -8,9 +8,11 @@ const handler = async (req, res) => {
       .collection("users")
       .find({})
       .toArray();
+      console.log(data)
     const result = res.status(200).json(JSON.parse(JSON.stringify(data)));
     return result;
   } catch (err) {
+    
     return res.status(500).json({ message: err.message });
   }
 };
