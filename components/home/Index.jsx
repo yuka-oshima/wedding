@@ -5,16 +5,16 @@ import HomeTitle from "./HomeTitle";
 import Information from "./Information";
 import useGetUser from "./api/useGetUser";
 
-const Index = ({userData}) => {
+const Index = () => {
   const [isActiveLoader, setIsActiveLoader] = useState(true);
-  // const [, userInfo] = useGetUser();
+  const [, userData] = useGetUser();
   
 
 
   useEffect(() => {
     setTimeout(() => {
       setIsActiveLoader(false);
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (

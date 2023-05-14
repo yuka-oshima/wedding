@@ -5,7 +5,8 @@ import Index from "../../../components/home/Index";
 export default function home(props) {
   return (
     <>
-     <Index userData={props.userData} />
+     <Index/>
+     {/* <Index userData={props.userData} /> */}
     </>
   );
 }

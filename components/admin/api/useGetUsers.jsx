@@ -6,7 +6,7 @@ const useGetUsers = () => {
   const [users, setUsers] = useState([]); 
 
   async function getUsers() {
-    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/user`;
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/answer`;
     const headers = {
       "Content-Type": "application/json",
     };

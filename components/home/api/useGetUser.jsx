@@ -4,23 +4,23 @@ import { useEffect, useState } from "react";
 
 const useGetUser = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [userInfo, setUserInfo] = useState({});
+  const [userData, setUserData] = useState({});
   const router = useRouter();
 
-  async function getUser(uuid) {
-    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/user/${uuid}`;
+  async function getUser(id) {
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/user/${id}`;
     const headers = {
       "Content-Type": "application/json",
     };
     setIsLoading(true);
     try {
       const response = await axios.get(url, { headers });
-      setUserInfo(response.data);
+      setUserData(response.data);
     } catch (error) {
-      setUserInfo([]);
+      setUserData([]);
       if (!error?.response) {
         console.log("Error: ", error);
-      }else {
+      } else {
         console.log(error.response);
       }
     } finally {
@@ -28,14 +28,13 @@ const useGetUser = () => {
     }
   }
 
-
   useEffect(() => {
     if (router.query.id === undefined) return;
     const uuid = router.query.id;
     getUser(uuid);
   }, [router]);
 
-  return [isLoading, userInfo,getUser];
+  return [isLoading, userData, getUser];
 };
 
 export default useGetUser;

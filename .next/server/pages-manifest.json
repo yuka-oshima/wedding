@@ -1,12 +1,7 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.js",
-  "/api/user": "pages/api/user.js",
+  "/_document": "pages/_document.js",
   "/api/user/[id]": "pages/api/user/[id].js",
-  "/admin/quiz-tally": "pages/admin/quiz-tally.js",
-  "/profile": "pages/profile.js",
-  "/home/[id]": "pages/home/[id].js",
-  "/quiz/[id]": "pages/quiz/[id].js",
-  "/_document": "pages/_document.js"
+  "/home/[id]": "pages/home/[id].js"
 }
