@@ -1,7 +1,7 @@
 import clientPromise from "../../../lib/mongo";
 
 
-const handler = async (req, res) => {
+export default async function handler(req, res) {
   const mongoClient = await clientPromise;
   try {
     const data = await mongoClient
@@ -17,7 +17,6 @@ const handler = async (req, res) => {
   }
 };
 
-export default handler;
 
 // api/new-meetup
 // import { MongoClient } from "mongodb";

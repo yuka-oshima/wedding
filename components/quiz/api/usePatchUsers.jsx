@@ -13,7 +13,7 @@ const usePatchUsers = () => {
       status: 1,
     };
     setIsLoading(true);
-    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/user/${id}`;
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/quiz`;
     try {
       await axios.patch(url, body, {
         headers: headers,
