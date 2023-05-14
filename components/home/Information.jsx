@@ -1,9 +1,5 @@
 import Link from "next/link";
-const Information = ({ userInfo }) => {
-  //もしurl"/quiz/${userInfo.uuid}"を直接叩いた場合は、"/home/${userInfo.uuid}"にリダイレクトする
-  if (userInfo.status === 1) {
-
-  }
+const Information = ({ userData }) => {
 
 
   return (
@@ -28,19 +24,19 @@ const Information = ({ userInfo }) => {
                 <p className="text-[12px] font-medium">＊There are 5 questions in total.</p>
               </div>
               <div className="w-full h-[6em]">
-                <Link href={`/quiz/${userInfo.uuid}`}>
+                <Link href={`/quiz/${userData.id}`}>
                   <button
                     className={`${
-                      userInfo.status === 1
+                      userData.status === 1
                         ? "bg-[#bebebe] cursor-not-allowed"
                         : "bg-[#716cd4d5] cursor-pointer"
                     } w-[12em] py-[0.5rem] custom-font font-semibold text-white rounded-xl`}
-                    disabled={userInfo.status === 1}
+                    disabled={userData.status === 1}
                   >
                     Quiz
                   </button>
                 </Link>
-                <div hidden={userInfo.status === 0} className="mt-[0.25em]">
+                <div hidden={userData.status === 0} className="mt-[0.25em]">
                   <Link href={`/answer/`}>
                   <button className="w-[12em] py-[0.5rem] custom-font font-semibold text-white rounded-xl bg-[#716cd4d5] cursor-pointer">
                     Answer

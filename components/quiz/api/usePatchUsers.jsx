@@ -3,16 +3,17 @@ import { useState } from "react";
 
 const usePatchUsers = () => {
   const [isPatchLoading, setIsLoading] = useState(false);
-  async function patchUsers(uuid,score) {
+  async function patchUsers(id, score) {
     const headers = {
       "Content-Type": "application/json",
     };
     const body = {
-        correct: score,
-        status:1,
+      id: id,
+      correct: score,
+      status: 1,
     };
     setIsLoading(true);
-    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/user/${uuid}`;
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/api/user/${id}`;
     try {
       await axios.patch(url, body, {
         headers: headers,
@@ -20,7 +21,7 @@ const usePatchUsers = () => {
     } catch (error) {
       if (!error?.response) {
         console.log("Error: ", error);
-      }else {
+      } else {
         console.log(error.response);
       }
     } finally {

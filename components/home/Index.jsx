@@ -5,7 +5,7 @@ import HomeTitle from "./HomeTitle";
 import Information from "./Information";
 import useGetUser from "./api/useGetUser";
 
-const Index = ({data}) => {
+const Index = ({userData}) => {
   const [isActiveLoader, setIsActiveLoader] = useState(true);
   // const [, userInfo] = useGetUser();
   
@@ -32,8 +32,8 @@ const Index = ({data}) => {
         <>
           <HomeTitle />
           <div></div>
-          <Greeting data={data} />
-          <Information userInfo={data} />
+          <Greeting userData={userData} />
+          <Information userData={userData} />
         </>
       )}
     </>

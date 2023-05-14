@@ -6,36 +6,45 @@ exports.ids = [272];
 exports.modules = {
 
 /***/ 1147:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_intersection_observer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4009);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([react_intersection_observer__WEBPACK_IMPORTED_MODULE_2__]);
+react_intersection_observer__WEBPACK_IMPORTED_MODULE_2__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
-// import { useInView } from "react-intersection-observer";
-const Greeting = ({ data  })=>{
+
+const Greeting = ({ userData  })=>{
     const [message, setMessage] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)("");
-    // const { ref, inView } = useInView({
-    //   rootMargin: "100px",
-    //   triggerOnce: true,
-    // });
-    // useEffect(() => {
-    //   if (userInfo.message === undefined) return;
-    //   const editMessage = userInfo.message.split("/");
-    //   const editMessageElement = editMessage.map((message, index) => {
-    //     //messageが"//n"の場合は改行
-    //     if (message === "\\n") {
-    //       return <br/>;
-    //     }else{
-    //       return <p key={index} className="custom-font text-md">{message}</p>;
-    //     }
-    //   });
-    //   setMessage(editMessageElement);
-    // }, [userInfo]);
+    const { ref , inView  } = (0,react_intersection_observer__WEBPACK_IMPORTED_MODULE_2__.useInView)({
+        rootMargin: "100px",
+        triggerOnce: true
+    });
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
+        if (userData.message === undefined) return;
+        const editMessage = userData.message.split("/");
+        const editMessageElement = editMessage.map((message, index)=>{
+            //messageが"//n"の場合は改行
+            if (message === "\\n") {
+                return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {});
+            } else {
+                return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                    className: "custom-font text-md",
+                    children: message
+                }, index);
+            }
+        });
+        setMessage(editMessageElement);
+    }, [
+        userData
+    ]);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
             className: "h-auto py-[2em] flex items-center justify-center bg-cover bg-[#d8c0e4]",
@@ -49,62 +58,68 @@ const Greeting = ({ data  })=>{
                             children: "Message"
                         })
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        className: "fadeIn flex-col items-center justify-center mt-[1rem]"
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                        id: "guestName",
-                        className: "font-semibold custom-font text-xl mt-[1em]",
-                        children: data
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                    message === "" ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
-                            id: "greetingBody",
-                            className: "custom-font text-sm mb-[1.5em]",
-                            children: [
-                                "本日はおいそがしい中",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "私たちのパーティーにご出席していただき",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "誠にありがとうございます",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "皆様にあたたかく見守られ",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "この佳き日を迎えられたことに",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "心より感謝いたします",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "私たちは2022年8月11日に結婚し",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "夫婦となりました",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "未熟なふたりですが手を取り合い",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "ともに歩んでいきたいと思います",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "これからも末永いお付き合いを",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "よろしくお願いいたします",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "どうぞ楽しいひとときを",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "お過ごしください",
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                "啓　由華"
-                            ]
-                        })
-                    }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
-                            className: "custom-font text-sm mb-[1.5em]",
-                            children: message
-                        })
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        ref: ref,
+                        className: inView ? "fadeIn flex-col items-center justify-center mt-[1rem]" : "flex-col items-center justify-center my-[2.5rem]",
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                className: "fadeIn flex-col items-center justify-center mt-[1rem]"
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                id: "guestName",
+                                className: "font-semibold custom-font text-xl mt-[1em]",
+                                children: userData.name
+                            }),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                            message === "" ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                    id: "greetingBody",
+                                    className: "custom-font text-sm mb-[1.5em]",
+                                    children: [
+                                        "本日はおいそがしい中",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "私たちのパーティーにご出席していただき",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "誠にありがとうございます",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "皆様にあたたかく見守られ",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "この佳き日を迎えられたことに",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "心より感謝いたします",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "私たちは2022年8月11日に結婚し",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "夫婦となりました",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "未熟なふたりですが手を取り合い",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "ともに歩んでいきたいと思います",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "これからも末永いお付き合いを",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "よろしくお願いいたします",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "どうぞ楽しいひとときを",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "お過ごしください",
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
+                                        "啓　由華"
+                                    ]
+                                })
+                            }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    className: "custom-font text-sm mb-[1.5em]",
+                                    children: message
+                                })
+                            })
+                        ]
                     })
                 ]
             })
@@ -113,6 +128,8 @@ const Greeting = ({ data  })=>{
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Greeting);
 
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -170,8 +187,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _HomeTitle__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6585);
 /* harmony import */ var _Information__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6921);
 /* harmony import */ var _api_useGetUser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(4943);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_api_useGetUser__WEBPACK_IMPORTED_MODULE_6__]);
-_api_useGetUser__WEBPACK_IMPORTED_MODULE_6__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Greeting__WEBPACK_IMPORTED_MODULE_3__, _api_useGetUser__WEBPACK_IMPORTED_MODULE_6__]);
+([_Greeting__WEBPACK_IMPORTED_MODULE_3__, _api_useGetUser__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -179,7 +196,7 @@ _api_useGetUser__WEBPACK_IMPORTED_MODULE_6__ = (__webpack_async_dependencies__.t
 
 
 
-const Index = ({ data  })=>{
+const Index = ({ userData  })=>{
     const [isActiveLoader, setIsActiveLoader] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(true);
     // const [, userInfo] = useGetUser();
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
@@ -201,10 +218,10 @@ const Index = ({ data  })=>{
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_HomeTitle__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {}),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {}),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Greeting__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
-                    data: data
+                    userData: userData
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Information__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .Z, {
-                    userInfo: data
+                    userData: userData
                 })
             ]
         })
@@ -228,9 +245,7 @@ __webpack_async_result__();
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 
 
-const Information = ({ userInfo  })=>{
-    //もしurl"/quiz/${userInfo.uuid}"を直接叩いた場合は、"/home/${userInfo.uuid}"にリダイレクトする
-    if (userInfo.status === 1) {}
+const Information = ({ userData  })=>{
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
             className: "h-[44em] flex items-center justify-center bg-cover greeting-bg-img",
@@ -275,15 +290,15 @@ const Information = ({ userInfo  })=>{
                                         className: "w-full h-[6em]",
                                         children: [
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
-                                                href: `/quiz/${userInfo.uuid}`,
+                                                href: `/quiz/${userData.id}`,
                                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
-                                                    className: `${userInfo.status === 1 ? "bg-[#bebebe] cursor-not-allowed" : "bg-[#716cd4d5] cursor-pointer"} w-[12em] py-[0.5rem] custom-font font-semibold text-white rounded-xl`,
-                                                    disabled: userInfo.status === 1,
+                                                    className: `${userData.status === 1 ? "bg-[#bebebe] cursor-not-allowed" : "bg-[#716cd4d5] cursor-pointer"} w-[12em] py-[0.5rem] custom-font font-semibold text-white rounded-xl`,
+                                                    disabled: userData.status === 1,
                                                     children: "Quiz"
                                                 })
                                             }),
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                                hidden: userInfo.status === 0,
+                                                hidden: userData.status === 0,
                                                 className: "mt-[0.25em]",
                                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
                                                     href: `/answer/`,
@@ -331,13 +346,73 @@ const Information = ({ userInfo  })=>{
 
 /***/ }),
 
+/***/ 4943:
+/***/ ((module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axios__WEBPACK_IMPORTED_MODULE_0__]);
+axios__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
+
+
+const useGetUser = ()=>{
+    const [isLoading, setIsLoading] = useState(false);
+    const [userInfo, setUserInfo] = useState({});
+    const router = useRouter();
+    async function getUser(uuid) {
+        const url = `${"http://localhost:3000"}/api/user/${uuid}`;
+        const headers = {
+            "Content-Type": "application/json"
+        };
+        setIsLoading(true);
+        try {
+            const response = await axios.get(url, {
+                headers
+            });
+            setUserInfo(response.data);
+        } catch (error) {
+            setUserInfo([]);
+            if (!error?.response) {
+                console.log("Error: ", error);
+            } else {
+                console.log(error.response);
+            }
+        } finally{
+            setIsLoading(false);
+        }
+    }
+    useEffect(()=>{
+        if (router.query.id === undefined) return;
+        const uuid = router.query.id;
+        getUser(uuid);
+    }, [
+        router
+    ]);
+    return [
+        isLoading,
+        userInfo,
+        getUser
+    ];
+};
+/* unused harmony default export */ var __WEBPACK_DEFAULT_EXPORT__ = ((/* unused pure expression or super */ null && (useGetUser)));
+
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
 /***/ 5072:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ UserDetails),
+/* harmony export */   "default": () => (/* binding */ home),
 /* harmony export */   "getStaticPaths": () => (/* binding */ getStaticPaths),
 /* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps)
 /* harmony export */ });
@@ -353,20 +428,13 @@ _components_home_Index__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependenc
 
 
 
-function UserDetails(props) {
+function home(props) {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_home_Index__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Z, {
-            data: props.userData.name
+            userData: props.userData
         })
     });
 }
-// export default ({ post }) => {
-//   return (
-//     <>
-//       <Index data={post} />
-//     </>
-//   );
-// };
 const getStaticPaths = async ()=>{
     const client = await mongodb__WEBPACK_IMPORTED_MODULE_1__.MongoClient.connect(process.env.MONGO_URI);
     const db = client.db();
@@ -383,14 +451,6 @@ const getStaticPaths = async ()=>{
                 }
             }))
     };
-// const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/user`);
-// const posts = await res.json();
-// const paths = posts.map((post) => ({
-//   params: {
-//     id: post.id.toString(),
-//   },
-// }));
-// return { paths, fallback: false };
 };
 const getStaticProps = async (context)=>{
     const id = context.params.id;
@@ -400,26 +460,18 @@ const getStaticProps = async (context)=>{
     const selectedUser = await userCollection.findOne({
         _id: new mongodb__WEBPACK_IMPORTED_MODULE_1__.ObjectId(id)
     });
-    console.log(selectedUser);
     client.close();
-    //6454d3020cfa5737e3472c87
     return {
         props: {
             userData: {
                 id: selectedUser._id.toString(),
-                name: selectedUser.name
+                name: selectedUser.name,
+                status: selectedUser.status,
+                correct: selectedUser.correct,
+                message: selectedUser.message
             }
         }
     };
-// const res = await fetch(
-//   `${process.env.NEXT_PUBLIC_API_URL}/api/user/${params}`
-// );
-// const post = await res.json();
-// return {
-//   props: {
-//     post,
-//   },
-// };
 };
 
 __webpack_async_result__();
@@ -523,6 +575,13 @@ module.exports = require("react-spinners/BarLoader");
 
 module.exports = import("axios");;
 
+/***/ }),
+
+/***/ 4009:
+/***/ ((module) => {
+
+module.exports = import("react-intersection-observer");;
+
 /***/ })
 
 };
@@ -532,7 +591,7 @@ module.exports = import("axios");;
 var __webpack_require__ = require("../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [893,664,406], () => (__webpack_exec__(5072)));
+var __webpack_exports__ = __webpack_require__.X(0, [893,664,299], () => (__webpack_exec__(5072)));
 module.exports = __webpack_exports__;
 
 })();

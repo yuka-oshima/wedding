@@ -5,14 +5,14 @@ import Link from "next/link";
 import usePatchUsers from "./api/usePatchUsers";
 import { useEffect } from "react";
 
-const QuizForm = ({userInfo}) => {
+const QuizForm = ({userData}) => {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [patchUsers] = usePatchUsers();
 
   useEffect(() => {
     if (showScore === false) return;
-    patchUsers(userInfo.uuid,score)
+    patchUsers(userData.id,score)
   }, [showScore]);
 
   return (
@@ -28,7 +28,7 @@ const QuizForm = ({userInfo}) => {
                 </p>
               </div>
               <div className="mt-[3rem]">
-                <Link href={`/home/${userInfo.uuid}`}>
+                <Link href={`/home/${userData.id}`}>
                   <button
                     className="px-[1rem] text-white bg-[#9E76B4] rounded-xl hover:opacity-50"
                   >

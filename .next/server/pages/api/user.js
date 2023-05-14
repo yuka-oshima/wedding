@@ -5,18 +5,21 @@ exports.id = 541;
 exports.ids = [541];
 exports.modules = {
 
-/***/ 9251:
+/***/ 8013:
+/***/ ((module) => {
+
+module.exports = require("mongodb");
+
+/***/ }),
+
+/***/ 6324:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ mongo)
-});
-
-;// CONCATENATED MODULE: external "mongodb"
-const external_mongodb_namespaceObject = require("mongodb");
-;// CONCATENATED MODULE: ./lib/mongo/index.js
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8013);
+/* harmony import */ var mongodb__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mongodb__WEBPACK_IMPORTED_MODULE_0__);
 
 if (!process.env.MONGO_URI) {
     throw new Error("Invalid environment variable MONGO_URI");
@@ -29,10 +32,10 @@ if (!URI) {
 let client;
 let clientPromise;
 if (false) {} else {
-    client = new external_mongodb_namespaceObject.MongoClient(URI, options);
+    client = new mongodb__WEBPACK_IMPORTED_MODULE_0__.MongoClient(URI, options);
     clientPromise = client.connect();
 }
-/* harmony default export */ const mongo = (clientPromise);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clientPromise);
 
 
 /***/ }),
@@ -44,7 +47,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_mongo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9251);
+/* harmony import */ var _lib_mongo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6324);
 
 const handler = async (req, res)=>{
     const mongoClient = await _lib_mongo__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z;
