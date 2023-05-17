@@ -28,7 +28,7 @@ const QuizForm = ({userData}) => {
                 </p>
               </div>
               <div className="mt-[3rem]">
-                <Link href={`/home/${userData.id}`}>
+                <Link href={`/home/${userData._id}`}>
                   <button
                     className="px-[1rem] text-white bg-[#9E76B4] rounded-xl hover:opacity-50"
                   >
