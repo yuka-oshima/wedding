@@ -4,7 +4,11 @@ const AnswerGuestTable = () => {
   const [, users] = useGetUsers();
 
   //usersのcorrectが5の人数を数える
-  const correctCount = users.filter((user) => user.correct === 5).length;
+  const correctCount1 = users.filter((user) => user.correct === 1).length;
+  const correctCount2 = users.filter((user) => user.correct === 2).length;
+  const correctCount3 = users.filter((user) => user.correct === 3).length;
+  const correctCount4 = users.filter((user) => user.correct === 4).length;
+  const correctCount5 = users.filter((user) => user.correct === 5).length;
 
   return (
     <>
@@ -20,7 +24,7 @@ const AnswerGuestTable = () => {
           <tbody>
             {users.map((guest) => (
               <tr
-                key={guest.id}
+                key={guest._id}
                 className={`${
                   guest.correct === 5 ? "bg-[#c9c8c8]" : ""
                 } border`}
@@ -42,8 +46,24 @@ const AnswerGuestTable = () => {
         </table>
       </div>
       <div className="mt-[1em] mb-[1.5em]">
-        <div>全問正解者数</div>
-        <p className="font-semibold border-b">{correctCount}人</p>
+        <div className="font-semibold">全問正解者数</div>
+        <p className="font-semibold border-b">{correctCount5}人</p>
+      </div>
+      <div className="mt-[1em] mb-[1.5em]">
+        <div>4問正解者数</div>
+        <p className="border-b">{correctCount4}人</p>
+      </div>
+      <div className="mt-[1em] mb-[1.5em]">
+        <div>3問正解者数</div>
+        <p className="border-b">{correctCount3}人</p>
+      </div>
+      <div className="mt-[1em] mb-[1.5em]">
+        <div>2問正解者数</div>
+        <p className="border-b">{correctCount2}人</p>
+      </div>
+      <div className="mt-[1em] mb-[1.5em]">
+        <div>1問正解者数</div>
+        <p className="border-b">{correctCount1}人</p>
       </div>
     </>
   );

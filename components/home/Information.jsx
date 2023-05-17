@@ -2,7 +2,7 @@ import Link from "next/link";
 const Information = ({ userData }) => {
   return (
     <>
-      <div className="h-[44em] flex items-center justify-center bg-cover greeting-bg-img">
+      <div id="info" className="h-[44em] flex items-center justify-center bg-cover greeting-bg-img">
         <div className="w-[85%] bg-white min-h-[80%] text-center rounded-xl">
           <div className="w-full mt-[3em] mb-[2em]">
             <p className="custom-title-font text-5xl font-medium tracking-wide">

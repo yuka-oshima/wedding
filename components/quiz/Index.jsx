@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Loader } from "../lib/useLoadingSpinner";
 import QuizForm from "./QuizForm";
 import useGetUser from "../home/api/useGetUser";

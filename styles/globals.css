@@ -117,7 +117,7 @@ li {
   animation-name: fadeInAnime;
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
-  animation-delay: 0.5s;
+  animation-delay: 2s;
   opacity: 0;
 }
 
@@ -130,6 +130,15 @@ li {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+.mask {
+  fill:none; /* 塗りの色 */
+  stroke:#ffffff; /* 線の色 */
+  stroke-width:12px; /* 線幅 */
+  stroke-linecap:round; /* 線端の形状 */
+  stroke-linejoin:round; /* 角の形状 */
 }
 
 @tailwind base;

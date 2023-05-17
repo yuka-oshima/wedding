@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import Quiz from "./QuizBody";
 import Link from "next/link";
@@ -32,7 +31,7 @@ const QuizForm = ({userData}) => {
                   <button
                     className="px-[1rem] text-white bg-[#9E76B4] rounded-xl hover:opacity-50"
                   >
-                    ホームに戻る
+                    Home
                   </button>
                 </Link>
               </div>
