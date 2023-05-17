@@ -12,11 +12,14 @@ const Greeting = ({ userData }) => {
     if (userData.message === undefined) return;
     const editMessage = userData.message.split("/");
     const editMessageElement = editMessage.map((message, index) => {
-      //messageが"//n"の場合は改行
       if (message === "\\n") {
-        return <br/>;
-      }else{
-        return <p key={index} className="custom-font text-md">{message}</p>;
+        return <br />;
+      } else {
+        return (
+          <p key={index} className="custom-font text-md">
+            {message}
+          </p>
+        );
       }
     });
     setMessage(editMessageElement);
@@ -24,7 +27,6 @@ const Greeting = ({ userData }) => {
 
   return (
     <>
-      {/* <div className="h-screen flex items-center justify-center bg-cover greeting-bg-img"> */}
       <div className="h-auto py-[2em] flex items-center justify-center bg-cover bg-[#d8c0e4]">
         <div className="w-[89%] bg-white text-center bg-opacity-95">
           <div className="w-full h-[3em] mt-[1.5em]">
@@ -40,10 +42,11 @@ const Greeting = ({ userData }) => {
                 : "flex-col items-center justify-center my-[2.5rem]"
             }
           >
-          <div
-            className={"fadeIn flex-col items-center justify-center mt-[1rem]"
-            }
-          ></div>
+            <div
+              className={
+                "fadeIn flex-col items-center justify-center mt-[1rem]"
+              }
+            ></div>
             <div
               id="guestName"
               className="font-semibold custom-font text-xl mt-[1em]"
@@ -51,7 +54,7 @@ const Greeting = ({ userData }) => {
               {userData.name}
             </div>
             <br />
-            {message === "" ? (
+            {userData.message === "" ? (
               <>
                 <p id="greetingBody" className="custom-font text-sm mb-[1.5em]">
                   本日はおいそがしい中
@@ -98,7 +101,7 @@ const Greeting = ({ userData }) => {
             )}
           </div>
         </div>
-        </div>
+      </div>
     </>
   );
 };

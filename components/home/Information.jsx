@@ -1,7 +1,5 @@
 import Link from "next/link";
 const Information = ({ userData }) => {
-
-
   return (
     <>
       <div className="h-[44em] flex items-center justify-center bg-cover greeting-bg-img">
@@ -24,7 +22,7 @@ const Information = ({ userData }) => {
                 <p className="text-[12px] font-medium">＊There are 5 questions in total.</p>
               </div>
               <div className="w-full h-[6em]">
-                <Link href={`/quiz/${userData.id}`}>
+                <Link href={`/quiz/${userData._id}`}>
                   <button
                     className={`${
                       userData.status === 1

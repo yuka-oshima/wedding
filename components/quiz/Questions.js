@@ -45,14 +45,14 @@ const questions = [
     ],
   },
   {
-    questionText: "",
+    questionText: "新郎新婦が結婚した日のディナーは何を食べたでしょう？",
     questionEnText:
-      "",
+      "What did the bride and groom /\n/ eat for their wedding anniversary dinner?",
     answerOptions: [
-      { answerText: "", isCorrect: true },
-      { answerText: "", isCorrect: true },
-      { answerText: "", isCorrect: true },
-      { answerText: "", isCorrect: true },
+      { answerText: "焼肉 / yakiniku", isCorrect: false },
+      { answerText: "寿司 / sushi", isCorrect: true },
+      { answerText: "ピザ / pizza", isCorrect: false },
+      { answerText: "天ぷら / tempura", isCorrect: false },
     ],
   },
 ];

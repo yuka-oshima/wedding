@@ -2,11 +2,10 @@ import { MongoClient, ObjectId } from "mongodb";
 import React from "react";
 import Index from "../../../components/home/Index";
 
-export default function home(props) {
+export default function home() {
   return (
     <>
      <Index/>
-     {/* <Index userData={props.userData} /> */}
     </>
   );
 }

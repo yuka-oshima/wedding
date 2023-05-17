@@ -2,16 +2,16 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { Loader } from "../lib/useLoadingSpinner";
 import QuizForm from "./QuizForm";
+import useGetUser from "../home/api/useGetUser";
 
-const QuizIndex = ({userData}) => {
-  const [isLoading, setIsLoading] = useState(true);
+const QuizIndex = () => {
+  const [isLoading, userData, getUser] = useGetUser();
   const router = useRouter();
-
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-  }, [router]);
+    if (router.query.id === undefined) return;
+    getUser(router.query.id);
+  }, []);
+
 
   return (
     <>

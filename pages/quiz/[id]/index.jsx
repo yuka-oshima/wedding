@@ -2,10 +2,10 @@ import { MongoClient, ObjectId } from "mongodb";
 import React from "react";
 import Index from "../../../components/quiz/Index";
 
-export default function UserDetails(props) {
+export default function UserDetails() {
   return (
     <>
-     <Index userData={props.userData} />
+     <Index/>
     </>
   );
 }

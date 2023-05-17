@@ -12,7 +12,7 @@ const QuizForm = ({userData}) => {
 
   useEffect(() => {
     if (showScore === false) return;
-    patchUsers(userData.id,score)
+    patchUsers(userData._id,score)
   }, [showScore]);
 
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Loader } from "../lib/useLoadingSpinner";
 import Greeting from "./Greeting";
 import HomeTitle from "./HomeTitle";
@@ -6,26 +6,17 @@ import Information from "./Information";
 import useGetUser from "./api/useGetUser";
 
 const Index = () => {
-  const [isActiveLoader, setIsActiveLoader] = useState(true);
-  const [, userData] = useGetUser();
-  
-
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsActiveLoader(false);
-    }, 1500);
-  }, []);
+  const [isLoading, userData] = useGetUser();
 
   return (
     <>
-      {isActiveLoader ? (
+      {isLoading ? (
         <div className="w-full h-screen flex items-center justify-center">
           <Loader
             width={150}
             height={7}
             className=""
-            isLoading={isActiveLoader}
+            isLoading={isLoading}
           />
         </div>
       ) : (
