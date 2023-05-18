@@ -3,7 +3,7 @@ import { BsCircle } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 import questions from "./Questions";
 
-const Quiz = ({ setScore, score, setShowScore}) => {
+const Quiz = ({ setScore, score, setShowScore,setCorrectAnswer}) => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [isCorrect, setIsCorrect] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -15,8 +15,15 @@ const Quiz = ({ setScore, score, setShowScore}) => {
     if (isCorrect === true) {
       setIsCorrect(true);
       setScore(score + 1);
+      setCorrectAnswer((prev) => {
+        return { ...prev, [currentQuestion + 1]: true };
+      });
     } else {
       setIsCorrect(false);
+      setCorrectAnswer((prev) => {
+        return { ...prev, [currentQuestion + 1]: false };
+      }
+      );
     }
     setTimeout(() => {
       const nextQuestion = currentQuestion + 1;

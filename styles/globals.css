@@ -69,11 +69,34 @@ li {
   position: relative;
 }
 
+.answer-bg-img::before {
+  background-image: url("../public/images/small_flowers.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  content:"" ;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.answer-bg-img{
+  position: relative;
+}
+
 .greeting-bg-img {
   background-image: url("../public/images/small_flowers.jpeg");
   width: 100%;
   height: auto;
   box-shadow: inset 0 0 20px 0px #FFF;
+}
+
+.thanks-img {
+  background-image: url("../public/images/thankyou.png");
 }
 
 .fadeUp {

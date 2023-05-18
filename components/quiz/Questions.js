@@ -45,7 +45,7 @@ const questions = [
     ],
   },
   {
-    questionText: "新郎新婦が結婚した日のディナーは何を食べたでしょう？",
+    questionText: "新郎新婦が結婚した日のディナーは/\n/何を食べたでしょう？",
     questionEnText:
       "What did the bride and groom /\n/ eat for their wedding anniversary dinner?",
     answerOptions: [

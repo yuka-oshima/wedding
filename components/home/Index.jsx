@@ -3,6 +3,7 @@ import { Loader } from "../lib/useLoadingSpinner";
 import Greeting from "./Greeting";
 import HomeTitle from "./HomeTitle";
 import Information from "./Information";
+import Carousel from "./Carousel";
 import useGetUser from "./api/useGetUser";
 
 const Index = () => {
@@ -22,8 +23,8 @@ const Index = () => {
       ) : (
         <>
           <HomeTitle />
-          <div></div>
           <Greeting userData={userData} />
+          <Carousel />
           <Information userData={userData} />
         </>
       )}
