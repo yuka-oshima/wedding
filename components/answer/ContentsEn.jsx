@@ -1,17 +1,23 @@
 const ContentsEn = () => {
-    return (
-      <>
-       <div>
+  return (
+    <>
+      <div>
         <div className="my-[2em] custom-font">
-          <p className="">第1問</p>
-          <p>二人が初めて会った場所は池袋の何口？</p>
-          <p className="py-[0.25em] text-xl font-semibold">答え：西口</p>
+          <p className="">Question 1</p>
+          <p>
+            Where did the bride and groom <br /> first meet at Ikebukuro
+            Station?
+          </p>
+          <p className="py-[0.25em] text-xl font-semibold">Answer：West exit</p>
           <p className="text-sm">
-            写真は旧池袋駅西口公園です。
+            This photo shows the former 
+            <br /> 
+            Ikebukuro Station West Exit Park.
             <br />
-            この噴水の前で待ち合わせをしました。
+            We met up in front of this fountain.
             <br />
-            現在は改修され別の形になっています。
+            Currently this location has been renovated <br />
+            and is in a different form.
           </p>
           <div className="flex justify-center">
             <img
@@ -22,17 +28,21 @@ const ContentsEn = () => {
           </div>
         </div>
         <div className="my-[2em] custom-font">
-          <p>第2問</p>
-          <p>二人が出会ってから今日は何日目？</p>
-          <p className="py-[0.25em] text-xl font-semibold">答え：2020日</p>
+          <p>Question 2</p>
+          <p>
+            How many days are today <br /> since the bride and groom met?
+          </p>
+          <p className="py-[0.25em] text-xl font-semibold">Answer：2020days</p>
           <p className="text-sm">
-            私たちは2017年10月8日に出会いました。
+            We met on October 8, 2017.
             <br />
             第1問目の西口で待ち合わせをし、
             <br />
-            初デートは池袋にある
+            For our first date,
             <br />
-            ピザ屋BORSAに行きました。
+            we met at the west exit of the first question <br />
+            and went to a pizza place "BORSA" in Ikebukuro.
+            <br />
           </p>
           <div className="flex justify-center">
             <img
@@ -43,17 +53,19 @@ const ContentsEn = () => {
           </div>
         </div>
         <div className="my-[2em] custom-font">
-          <p>第3問</p>
-          <p>この中で二人が行ったことのない国は？</p>
-          <p className="py-[0.25em] text-xl font-semibold">答え：ドイツ</p>
+          <p>Question 3</p>
+          <p>
+            Which country has the bride and groom <br /> never been to together?
+          </p>
+          <p className="py-[0.25em] text-xl font-semibold">Answer：Germany</p>
           <p className="text-sm">
-            二人が行った国は、
+            The countries they traveled to were
             <br />
-            イタリア、香港、オランダ、
+            Italy, Hong Kong, the Netherlands,
             <br />
-            アイルランド、ベルギー、マカオです。
+            Ireland, Belgium, and Macau.
             <br />
-            そして来月はついにドイツに行きます！
+            And next month we are finally going to Germany!
           </p>
           <div className="flex justify-center">
             <img
@@ -64,21 +76,21 @@ const ContentsEn = () => {
           </div>
         </div>
         <div className="my-[2em] custom-font">
-          <p>第4問</p>
+          <p>Question 4</p>
           <p>
-            新郎がプロポーズ時に
+            How many roses did the groom
             <br />
-            新婦にプレゼントしたバラの本数は何本？
+            give the bride when he proposed?
           </p>
-          <p className="py-[0.25em] text-xl font-semibold">答え：24本</p>
+          <p className="py-[0.25em] text-xl font-semibold">Answer：24 roses</p>
           <p className="text-sm">
-            24本のバラは、
+            The 24 roses are the same number
             <br />
-            新婦の年齢と同じ本数です。
+            as the bride's age at the time.
             <br />
-            24本のバラには「1日中思っています」
+            The 24 roses mean
             <br />
-            という意味があるそうです。
+            "I think of you all day long."
           </p>
           <div className="flex justify-center">
             <img
@@ -89,19 +101,23 @@ const ContentsEn = () => {
           </div>
         </div>
         <div className="my-[2em] custom-font">
-          <p>第5問</p>
+          <p>Question 5</p>
           <p>
-            新郎新婦が結婚した日のディナーは
+            What did the bride and groom
             <br />
-            何を食べたでしょう？
+            eat for their wedding anniversary dinner?
           </p>
-          <p className="py-[0.25em] text-xl font-semibold">答え：寿司</p>
+          <p className="py-[0.25em] text-xl font-semibold">Answer：Sushi</p>
           <p className="text-sm">
-            家の近くのお寿司屋さん"うお徳"で食べました。
+            We ate at a sushi restaurant "Uotoku" near our house.
             <br />
-            新郎が結婚する以前から気になっていたお店です。
+            The groom had been interested in this restaurant
             <br />
-            新婦は回らないお寿司が初めてでした。
+            since before they were married.
+            <br />
+            It was the first time for the bride
+            <br />
+            to have sushi that did not rotate.
           </p>
           <div className="flex justify-center">
             <img
@@ -112,9 +128,8 @@ const ContentsEn = () => {
           </div>
         </div>
       </div>
-      </>
-    );
-  };
-  
-  export default ContentsEn;
-  
+    </>
+  );
+};
+
+export default ContentsEn;
