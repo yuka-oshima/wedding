@@ -14,7 +14,7 @@ export default function UserDetails() {
 export const getStaticPaths = async () => {
   const client = await MongoClient.connect(process.env.MONGO_URI);
   const db = client.db();
-  const userCollection = db.collection("users");
+  const userCollection = db.collection("test");
   const users = await userCollection.find({}, { _id: 1 }).toArray();
   client.close();
 
@@ -31,7 +31,7 @@ export const getStaticProps = async (context) => {
 
   const client = await MongoClient.connect(process.env.MONGO_URI);
   const db = client.db();
-  const userCollection = db.collection("users");
+  const userCollection = db.collection("test");
 
   const selectedUser = await userCollection.findOne({
     _id: new ObjectId(id),

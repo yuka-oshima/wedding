@@ -10,18 +10,15 @@ const HomeTitle = () => {
   useEffect(() => {
   var stroke;
   stroke = new Vivus("welcome_logo", {
-    //アニメーションをするIDの指定
-    // start:'manual',
-    type: "scenario-sync", // アニメーションのタイプを設定
-    duration: 100, //アニメーションの時間設定。数字が小さくなるほど速い
-    forceRender: false, //パスが更新された場合に再レンダリングさせない
-    animTimingFunction: Vivus.LINEAR, //動きの加速減速設定
+    type: "scenario-sync", 
+    duration: 100, 
+    forceRender: false, 
+    animTimingFunction: Vivus.LINEAR, 
   });
 
   window.addEventListener("load", function () {
     stroke.play();
     setTimeout(function() {
-      // 800ミリ秒の遅延後にSVGアニメーションを実行
     }, 800);
   });
   }, []);

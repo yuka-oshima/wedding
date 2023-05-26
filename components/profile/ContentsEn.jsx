@@ -8,14 +8,14 @@ const ContentsEn = () => {
             alt=""
           />
           <div className="flex-col text-left ml-[1.5em] mt-[3em] custom-font">
-            <p className="text-xl font-semibold">OSHIMA Satoshi </p>
-            <p className="text-sm mt-[0.25em]">1/2/1993</p>
+            <p className="text-xl font-semibold">YAMADA TARO</p>
+            <p className="text-sm mt-[0.25em]">1/1/1999</p>
           </div>
         </div>
         <div className="w-[90%] mx-auto mt-[1em] custom-font">
           <div className="mb-[0.5em]">
             <p className="font-semibold">Hometown</p>
-            <p>Nerima-ku, Tokyo</p>
+            <p>Tokyo</p>
           </div>
           <div className="mb-[0.5em]">
             <p className="font-semibold">Favorite Countries</p>
@@ -23,21 +23,17 @@ const ContentsEn = () => {
           </div>
           <div className="mb-[0.5em]">
             <p className="font-semibold">Favorite Foods</p>
-            <p>pizza, beefsteak, sweets</p>
-          </div>
-          <div className="mb-[0.5em]">
-            <p className="font-semibold">Favorite Painter</p>
-            <p>Vermeer</p>
+            <p>pizza, beefsteak</p>
           </div>
           <div className="mb-[0.5em]">
             <p className="font-semibold">Where I want to go</p>
-            <p>Mt. Roraima, Iceland</p>
+            <p>Iceland</p>
           </div>
         </div>
         <div className="flex justify-center mt-[3em] ">
           <div className="flex-col text-left  mt-[3em] custom-font">
-            <p className="text-xl font-semibold">OSHIMA Yuka</p>
-            <p className="text-sm mt-[0.25em]">10/2/1997</p>
+            <p className="text-xl font-semibold">YAMADA HANA</p>
+            <p className="text-sm mt-[0.25em]">1/2/1999</p>
           </div>
           <img
             src="/images/bride.jpg"
@@ -48,23 +44,19 @@ const ContentsEn = () => {
         <div className="w-[90%] mx-auto mt-[1em] pb-[2em] custom-font">
           <div className="mb-[0.5em]">
             <p className="font-semibold">Hometown</p>
-            <p>Kazo City, Saitama</p>
+            <p>Tokyo</p>
           </div>
           <div className="mb-[0.5em]">
             <p className="font-semibold">Pastime</p>
-            <p>travel, scuba diving</p>
-          </div>
-          <div className="mb-[0.5em]">
-            <p className="font-semibold">Favorite Artist</p>
-            <p>Ed Sheeran、Arashi</p>
+            <p>travel</p>
           </div>
           <div className="mb-[0.5em]">
             <p className="font-semibold">Favorite Foods</p>
-            <p>spicy pollack roe, custard pudding, croissant</p>
+            <p>custard pudding, croissant</p>
           </div>
           <div className="pb-[0.5em]">
             <p className="font-semibold">Where I want to go</p>
-            <p>Great Barrier Reef</p>
+            <p>Austria</p>
           </div>
         </div>
       </>

@@ -15,7 +15,7 @@ const AnswerIndex = () => {
   };
 
   return (
-    <div className="w-full h-auto answer-bg-img">
+    <div className="w-full h-screen answer-bg-img">
       <div className="w-[98%] flex justify-end mr-[0.5em]">
         <button
           id="JP"
@@ -36,7 +36,7 @@ const AnswerIndex = () => {
           EN
         </button>
       </div>
-      <div className="w-full h-full text-center">
+      <div className="w-full h-auto text-center">
         <div className="pt-[0.25em] custom-title-font font-medium text-5xl">
           Answer
         </div>

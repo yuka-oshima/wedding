@@ -10,8 +10,6 @@ const QuizForm = ({ userData }) => {
     1: false,
     2: false,
     3: false,
-    4: false,
-    5: false,
   });
   const [showScore, setShowScore] = useState(false);
   const [patchUsers] = usePatchUsers();
@@ -40,8 +38,6 @@ const QuizForm = ({ userData }) => {
                       <th className="border-[#000] border-r px-4">1</th>
                       <th className="border-[#000] border-r px-4">2</th>
                       <th className="border-[#000] border-r px-4">3</th>
-                      <th className="border-[#000] border-r px-4">4</th>
-                      <th className="border-[#000] border-r px-4">5</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -54,12 +50,6 @@ const QuizForm = ({ userData }) => {
                       </td>
                       <td className="border-[#000] border-r px-3">
                         {correctAnswer[3] ? "○" : "×"}
-                      </td>
-                      <td className="border-[#000] border-r px-3">
-                        {correctAnswer[4] ? "○" : "×"}
-                      </td>
-                      <td className="border-[#000] border-r px-3">
-                        {correctAnswer[5] ? "○" : "×"}
                       </td>
                     </tr>
                   </tbody>

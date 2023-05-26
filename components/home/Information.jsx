@@ -16,14 +16,14 @@ const Information = ({ userData }) => {
             <div className="bg">
               <div className="flex-col items-center justify-center my-[1em] custom-font">
                 <p>
-                  新郎新婦クイズを用意しました
+                  クイズを用意しました
                   <br />
                   ぜひ挑戦してみてください
                   <br />
                 </p>
-                <p className="mt-[0.5em] font-medium">※問題は全部で5問です</p>
+                <p className="mt-[0.5em] font-medium">※問題は全部で3問です</p>
                 <p className="text-[12px] font-medium">
-                  ＊There are 5 questions in total.
+                  ＊There are 3 questions in total.
                 </p>
               </div>
               <div className="w-full h-[6em] mb-[2em]">
